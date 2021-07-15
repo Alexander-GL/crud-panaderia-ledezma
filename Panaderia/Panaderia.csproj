@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6A8FB97-4363-4569-BCE2-CD98BE9C0149}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Panaderia</RootNamespace>
+    <AssemblyName>Panaderia</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\alexa\OneDrive\Documents\5° Semestre\Admin. BD I\Panaderia Ledezma\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>bakery-shop.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>07657CC2321E636D91925457ED4230A4E57C4005</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Panaderia_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgregarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarEmpleado.Designer.cs">
+      <DependentUpon>AgregarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AsistenciaDAL.cs" />
+    <Compile Include="AsistenciaEmpleados.cs" />
+    <Compile Include="Base_Datos.cs" />
+    <Compile Include="BuscarEmpleadoEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarEmpleadoEditor.Designer.cs">
+      <DependentUpon>BuscarEmpleadoEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarEmpleado.Designer.cs">
+      <DependentUpon>BuscarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarAsistencia.Designer.cs">
+      <DependentUpon>ConsultarAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Desición.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desición.Designer.cs">
+      <DependentUpon>Desición.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarEmpleado.Designer.cs">
+      <DependentUpon>EditarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarEmpleado.Designer.cs">
+      <DependentUpon>EliminarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hora_Llegada.cs" />
+    <Compile Include="Empleado.cs" />
+    <Compile Include="EmpleadosDAL.cs" />
+    <Compile Include="Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario.Designer.cs">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventarioDAL.cs" />
+    <Compile Include="InventarioProductos.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginEmpleado.Designer.cs">
+      <DependentUpon>LoginEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento.Designer.cs">
+      <DependentUpon>Mantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maquinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maquinas.designer.cs">
+      <DependentUpon>Maquinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuEncargado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuEncargado.Designer.cs">
+      <DependentUpon>MenuEncargado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuDueño.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuDueño.Designer.cs">
+      <DependentUpon>MenuDueño.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Noti2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Noti2.Designer.cs">
+      <DependentUpon>Noti2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificacionAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificacionAuto.Designer.cs">
+      <DependentUpon>NotificacionAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificacionMaquina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotificacionMaquina.Designer.cs">
+      <DependentUpon>NotificacionMaquina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipoUsuario.Designer.cs">
+      <DependentUpon>TipoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validaciones.cs" />
+    <EmbeddedResource Include="AgregarEmpleado.resx">
+      <DependentUpon>AgregarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarEmpleadoEditor.resx">
+      <DependentUpon>BuscarEmpleadoEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarEmpleado.resx">
+      <DependentUpon>BuscarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarAsistencia.resx">
+      <DependentUpon>ConsultarAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desición.resx">
+      <DependentUpon>Desición.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarEmpleado.resx">
+      <DependentUpon>EditarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarEmpleado.resx">
+      <DependentUpon>EliminarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario.resx">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.es-MX.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginEmpleado.resx">
+      <DependentUpon>LoginEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento.resx">
+      <DependentUpon>Mantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maquinas.resx">
+      <DependentUpon>Maquinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuEncargado.resx">
+      <DependentUpon>MenuEncargado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuDueño.resx">
+      <DependentUpon>MenuDueño.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Noti2.resx">
+      <DependentUpon>Noti2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificacionAuto.resx">
+      <DependentUpon>NotificacionAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificacionMaquina.resx">
+      <DependentUpon>NotificacionMaquina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TipoUsuario.resx">
+      <DependentUpon>TipoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Panaderia_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bakery-shop.ico" />
+    <Content Include="Properties\NewFile1.txt" />
+    <None Include="Resources\twitter.png" />
+    <None Include="Resources\facebook.png" />
+    <None Include="Resources\instagram.png" />
+    <None Include="Resources\Direccion.jpeg" />
+    <None Include="Resources\kisspng-computer-icons-avatar-login-user-avatar-5ac207e6c8c133.5629676315226654468223.png" />
+    <None Include="Resources\pan8.jpg" />
+    <None Include="Resources\pan7.jpg" />
+    <None Include="Resources\pan6.jpg" />
+    <None Include="Resources\pan5.jpg" />
+    <None Include="Resources\pan4.jpg" />
+    <None Include="Resources\pan3.jpg" />
+    <None Include="Resources\pan2.jpg" />
+    <None Include="Resources\pan1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
